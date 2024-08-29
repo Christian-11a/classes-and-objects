@@ -38,13 +38,13 @@ void displayBooks() {
             return;
         }
 
-        // Header row with setw to align columns
+   
         cout << left << setw(20) << "Title" 
              << setw(20) << "Author" 
              << setw(6) << "Year" << endl;
         cout << "--------------------------------------------\n";
 
-        // Print each book's details in a row with setw for alignment
+       
         for (int i = 0; i < numBooks; i++) {
             cout << left << setw(20) << books[i].getTitle()
                  << setw(20) << books[i].getAuthor()
@@ -55,7 +55,7 @@ void displayBooks() {
     void searchBookByTitle(string title) {
         for (int i = 0; i < numBooks; i++) {
             if (books[i].getTitle() == title) {
-                // Book found
+        
                 cout << "\nBook found!\n";
                 cout << left << setw(20) << "Title" 
                      << setw(20) << "Author" 
@@ -76,7 +76,7 @@ int main() {
     int choice;
 
     while (true) {
-        system("cls");  // Clears the console
+        system("cls");  
         cout << "=======================" << endl;
         cout << "  Library Management   " << endl;
         cout << "=======================" << endl;
@@ -88,14 +88,14 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
-        system("cls");  // Clears the console after each choice
+        system("cls");  
 
         switch (choice) {
             case 1: {
                 string title, author;
                 int year;
                 cout << "\nEnter book title: ";
-                cin.ignore();  // Clear the newline character from the input buffer
+                cin.ignore();  
                 getline(cin, title);
                 cout << "Enter author's name: ";
                 getline(cin, author);
@@ -113,7 +113,7 @@ int main() {
             case 3: {
                 string title;
                 cout << "\nEnter book title to search: ";
-                cin.ignore();  // Clear the newline character from the input buffer
+                cin.ignore();  
                 getline(cin, title);
                 library.searchBookByTitle(title);
                 break;
